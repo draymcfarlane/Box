@@ -1,0 +1,7 @@
+<svg width="47" height="36" viewBox="0 0 47 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="8.31704" cy="29.9655" rx="6.09756" ry="6.03448" fill="black"/>
+<ellipse cx="32.5854" cy="29.9655" rx="6.09756" ry="6.03448" fill="black"/>
+<line x1="2" y1="19.5" x2="39" y2="19.5" stroke="black" stroke-width="5"/>
+<line y1="-2.5" x2="19.4707" y2="-2.5" transform="matrix(0.375799 -0.926701 0.929379 0.369128 39 22.0435)" stroke="black" stroke-width="5"/>
+<line y1="-2.5" x2="18.8688" y2="-2.5" transform="matrix(-0.10341 -0.994639 0.994856 -0.101303 6.97559 18.7677)" stroke="black" stroke-width="5"/>
+</svg>

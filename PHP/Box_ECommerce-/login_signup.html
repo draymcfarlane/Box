@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+     <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+          <title>Login / Sign Up</title>
+          <link rel="icon" type="image/x-icon" href="img/Favicons/faviconstart.svg">
+          <link rel="stylesheet" href="css/login_signup.css">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+     </head>
+     
+     <body>
+          <div class="hero">
+               <div class="form-box">
+                    
+                    <button type="button" class="leave-btn" onclick="window.location.href = 'startpage.html';">&#10005;</button>
+                    
+                    <div class="social-icons">
+                         <a target = "blank" href = 'https://instagram.com/dray_345?igshid=YmMyMTA2M2Y='><img src="img/Footer/instagram_icon.svg" alt=""></a>
+                         <a target = "blank" href="https://www.facebook.com/deonaundray.mcfarlane/"><img src="img/Footer/facebook_icon.svg" alt=""></a>
+                    </div>
+                    <div id="login-box" class="input-group">
+                         <input type="email" class="input-field" id="email" placeholder="Email Id" required>
+                         <input type="password" class="input-field" id="password" placeholder="Enter Password" required>
+                         <span class="eye" onclick="myFunction()">
+                              <i id="hide1" class="fa fa-eye"></i>
+                              <i id="hide2" class="fa fa-eye-slash"></i>
+                         </span>
+                         <button onclick="signIn()" id="login" class="login-btn">Log in</button><br>
+                         <button onclick="signUp()" id="signUp" class="register-btn">Register</button>
+                    </div>
+                    
+               </div>
+          </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+          <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="js/firebase.js"></script>
+          <script src="js/hide.js"></script>
+     </body>
+</html>
