@@ -1,0 +1,94 @@
+:root { 
+     --alto: #d9d9d9c2; /*Transparent white*/
+     --black: #000000;
+     --ochre: #da722c; /*Footer Headings*/
+     --white: #ffffff;
+     
+     --black: 
+     rgba(0, 0, 0, 1);
+     --blue-whale: 
+     rgba(2, 48, 71, 1);
+     --flint: 
+     rgba(111, 102, 102, 1);
+     --sonic-silver: 
+     rgba(120, 119, 119, 1);
+     --alto: 
+     rgba(217, 217, 217, 0.761);
+     --ochre: 
+     rgba(218, 114, 44, 1);
+     --bon-jour: 
+     rgba(223, 223, 223, 1);
+     --white: 
+     rgba(255, 255, 255, 1);
+     
+     --font-size-xxs: 14px;
+     --font-size-xs: 16px;
+     --font-size-m: 20px;
+     --font-size-s2: 18px;
+     --font-size-l2: 45px;
+     
+     --font-family-gothic_a1: "Gothic A1";
+     --font-family-gothic_a1-black: "Gothic A1-Black";
+     --font-family-poppins: "Poppins";
+     --font-family-poppins-bold: "Poppins-Bold";
+     --font-family-poppins-regular: "Poppins-Regular";
+     
+     /*Preset Font Sizes*/
+     --font-size-l: 18px;
+     --font-size-m: 16px;
+     --font-size-s: 14px;
+     --font-size-xl: 45px;
+     
+     /*Preset Font Families*/
+     --font-family-gothic_a1: "Gothic A1", Helvetica;
+     --font-family-poppins: "Poppins", Helvetica;
+     }
+     
+     /*Preset Font Styles*/
+     .poppins-normal-white-16px {
+     color: var(--white);
+     font-family: var(--font-family-poppins);
+     font-size: var(--font-size-m);
+     font-style: normal;
+     font-weight: 400;
+     }
+     
+     .gothica1-black-black-45px {
+     color: var(--black);
+     font-family: var(--font-family-gothic_a1);
+     font-size: var(--font-size-xl);
+     font-style: normal;
+     font-weight: 900;
+     }
+
+     .gothica1-black-black-20px {
+     color: var(--black);
+     font-family: var(--font-family-gothic_a1);
+     font-size: var(--font-size-m);
+     font-style: normal;
+     font-weight: 400;
+     }
+
+     .gothica1-white-white-45px {
+     color: var(--white);
+     font-family: var(--font-family-gothic_a1);
+     font-size: var(--font-size-xl);
+     font-style: normal;
+     font-weight: 900;
+     }
+     
+     .poppins-bold-ochre-18px {
+     color: var(--ochre);
+     font-family: var(--font-family-poppins);
+     font-size: var(--font-size-l);
+     font-style: normal;
+     font-weight: 700;
+     }
+     
+     .poppins-bold-ochre-14px {
+     color: var(--black);
+     font-family: var(--font-family-poppins);
+     font-size: var(--font-size-s);
+     font-style: normal;
+     font-weight: 400;
+     }     

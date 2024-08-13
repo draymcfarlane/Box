@@ -1,0 +1,175 @@
+/*Fonts import*/
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1:400,900|Poppins:400,700");
+
+/*All of page*/
+* {
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+.eye {
+  position: absolute;
+  margin-left: 270px;
+  margin-bottom: 10px;
+}
+#hide1{
+  display: none;
+}
+
+/*******************************************************************Screen Sizing Section*/
+
+@media screen and (max-width:1500px) {
+
+/*******************************************************************Hero Section*/
+
+.hero {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/Quick_Cats_Section/background.svg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.form-box {
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.leave-btn {
+  top: 18px;
+  right: 18px;
+  background: none;
+  position: absolute;
+  border: none;
+  color: #777;
+  cursor: pointer;
+}
+
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #24a4ff1f;
+  border-radius: 30px;
+}
+
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: #10a7ff; /*linear-gradient(to right, #10a7ff, #f5cf83);*/
+  border-radius: 30px;
+  transition: .5s;
+}
+
+.social-icons {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 12px;
+  box-shadow: 0 0 20px 0 #24a4ff1f;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #000000; /*linear-gradient(to right, #10a7ff, #f5cf83);*/
+}
+
+.input-group {
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: .5s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px;
+  margin-bottom: 30px;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.login-btn, .register-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: #10a7ff; /*linear-gradient(to right, #10a7ff, #f5cf83);*/
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+.check-box {
+  margin: 30px 10px 30px 0;
+}
+
+span {
+  color: #777;
+  font-size: 12px;
+  bottom: 117px;
+  position: absolute;
+}
+
+#login-box {
+  left: 50px;
+}
+
+#register {
+  left: 450px;
+}
+
+/*******************************************************************Misc*/
+/*Body of website*/
+body {
+  margin: 0; 
+  background: #ffffff;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  overflow-x: scroll; 
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+}
+
+@media screen and (max-width:950px) {
+  .form-box {
+    width: 350px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+}

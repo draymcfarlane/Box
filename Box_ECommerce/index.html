@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Box</title>
+    <link rel="icon" type="image/x-icon" href="img/Favicons/favicon1.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/hero_footer_global.css">
+    <link rel="stylesheet" href="css/var.css">
+    <link rel="stylesheet" href="css/transition.css">
+  </head>
+  <body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div class="pagecontainer">
+
+<!--Header Section-->
+
+<!--section margins-->
+<div class="header-section">
+<header>
+    <div class="nav">
+        <a href="index.html"><img class="box" src="img/Hero/logo.svg" alt="BOX"></a>
+
+        <div class="shopping-cart">
+          <div class="sum-prices">
+              <!--Shopping cart logo-->
+              <img class="cart shoppingCartButton" src="img/Hero/cart.svg" alt="cart">
+              <!--The total prices of products in the shopping cart -->
+              <h6 id="sum-prices">&nbsp;</h6>
+          </div>
+      </div>
+      <div class="producstOnCart hide">
+          <div class="overlay"></div>
+          <div class="top">
+              <button id="closeButton">&#10005;</button>
+              <h3>Cart</h3>
+          </div>
+          <div id="buyItems">
+              <h4 class="empty">Your shopping cart is empty</h4>
+          </div>
+          <button class="btn checkout hidden">Check out</button>
+      </div>
+
+        <button onclick="window.location.href = 'inventory.html';" class="button-border"><img src="img/Hero/search.svg" id="search" alt=""></button>
+        
+        <a class="button-border misc_burger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <img src="img/Hero/burger_icon.svg" alt="burger">
+        </a>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title txt_margin_right" id="offcanvasExampleLabel">Menu</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p class="txt_margin_left"><img src="img/Hero/box_icon.png" class="sprites" alt="">Categories</p>
+                <button onclick="window.location.href = 'Computer_And_Accessories.html';">Computers &amp; Accessories</button><br>
+                <button onclick="window.location.href = 'Fitness.html';">Fitness</button><br>
+                <button onclick="window.location.href = 'Automotive.html';">Automotive</button><br>
+                <button onclick="window.location.href = 'Pet_Supplies.html';">Pet Supplies</button><br>
+                <button onclick="window.location.href = 'Gift_Cards.html';">Gift Cards</button><br>
+                <button onclick="window.location.href = 'Gaming.html';">Gaming</button><br>
+                <button onclick="window.location.href = 'morecats.html';">View more categories</button><br><br>
+
+                <p class="txt_margin_left"><img src="img/Hero/settings_icon.png" class="sprites" alt="">Account</p>
+                <button onclick="signOut()" id="signOut">Sign Out</button><br><br>
+
+                <p class="txt_margin_left"><img src="img/Hero/wind_icon.png" class="sprites" alt="">Quick Links</p>
+                <button onclick="window.location.href = 'About_Us.html';">About Us</button><br>
+                <button onclick="window.location.href = 'Contact_Us.html';">Contact Us</button><br>
+                <button onclick="window.location.href = 'Privacy_Policy.html';">Privacy Policy</button><br>
+                <button onclick="window.location.href = 'Terms_And_Conditions.html';">Terms &amp; Conditions</button>                
+
+            </div>
+          </div>
+    </div>
+
+</header>
+
+<div class="slider">
+    <!-- fade css -->
+    <div class="myslide">
+          <a href="item.html"><img src="img/Hero/Hero_Slides/hero_slide1.svg" alt=""></a>
+    </div>
+    
+    <div class="myslide">
+          <a href="item.html"><img src="img/Hero/Hero_Slides/hero_slide2.svg" alt=""></a>
+</div>
+    
+    <div class="myslide">
+          <a href="item.html"><img src="img/Hero/Hero_Slides/hero_slide3.svg" alt=""></a>
+</div>
+    
+    <div class="myslide">
+          <a href="Fitness.html"><img src="img/Hero/Hero_Slides/hero_slide4.svg" alt=""></a>
+    </div>
+    
+    <div class="myslide">
+          <a href="item.html"><img src="img/Hero/Hero_Slides/hero_slide5.svg" alt=""></a>
+    </div>
+    <!-- /fade css -->
+    
+    <!-- onclick js -->
+    <a class="prev" onclick="plusSlides(-1)"><img src="img/Hero/previous_slide_left_button.svg" alt=""></a>
+    <a class="next" onclick="plusSlides(1)"><img src="img/Hero/next_slide_right_button.svg" alt=""></a>
+
+    <div class="dotsbox" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <!-- /onclick js -->
+</div>
+</div>
+
+<main>
+
+<!--Quick Cats Section-->
+
+<!--section margins-->
+<div class="quick-cats-section">
+
+    <!--Controls keeping the Popular Categories txt and button on same line-->
+    <div class="heading_and_button_inline">
+
+            <!--Popular Categories txt & Preset Font Style--> 
+            <h1 class="quick_cats_heading gothica1-white-white-45px">Popular Categories</h1>
+
+            <!--btn txt-->
+            <button onclick="window.location.href = 'morecats.html';" class="view-more-categories gothica1-black-black-20px" >View more categories</button>
+    </div>
+
+    <!--houses the cat buttons-->
+    <div class="categories">
+
+            <!--controls column for btn 1 & 4-->
+            <div class="cat_col_1">
+                <a href="Computer_And_Accessories.html"><img class="cat_button" src="img/Quick_Cats_Section/cat_1_button.svg" alt="cat_1_button"></a> <!--made a button for a test-->
+                <a href="Fitness.html"><img class="cat_button" src="img/Quick_Cats_Section/cat_2_button.svg" alt="cat_4_button"></a>
+            </div>
+
+            <!--controls column for btn 2 & 5-->
+            <div class="cat_col_2 supporting_col">
+                <a href="Automotive.html"><img class="cat_button" src="img/Quick_Cats_Section/cat_3_button.svg" alt="cat_2_button"></a>
+                <a href="Pet_Supplies.html"><img class="cat_button" src="img/Quick_Cats_Section/cat_4_button.svg" alt="cat_5_button"></a>
+            </div>
+
+            <!--controls column for btn 3 & 6-->
+            <div class="cat_col_3 supporting_col">
+                <a href="Gift_Cards.html"><img class="cat_button" src="img/Quick_Cats_Section/cat_5_button.svg" alt="cat_3_button"></a>
+                <a href="Gaming.html"><img class="cat_button" src="img/Quick_Cats_Section/cat_6_button.svg" alt="cat_6_button"></a>
+            </div>
+    </div>
+</div>
+
+<!--International Top Picks Section-->
+
+<!--section margins-->
+<div class="international-top-picks-section">
+
+    <!--Internationally Picked txt & Preset Font Style--> 
+    <div class="internationally-picked-heading gothica1-white-white-45px">Internationally Picked</div>
+
+    <div class="item_row">
+        <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <a href="item.html"><div class="img-wrapper">
+                            <img src="img/Items/Computers/headset1.png" alt="...">
+                        </div></a>
+                        <div class="card-body">
+                              <h4 class="productName">Gaming / HyperX Cloud II - Gaming Headset</h4>
+                              <span class="stars"></span>
+                              <h4 class="price greenprices">
+                                   $<span class="priceValue">69.50</span>
+                              </h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><button class="addToCart" data-product-id="20">Add to cart</button></li>
+                            <li onclick="window.location.href = 'item.html';" class="list-group-item"><button>Details</button></li>
+                        </ul>
+               </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="img/Items/Pets/cockatiel1.png" alt="...">
+                    </div>
+                    <div class="card-body">
+                     <h4 class="productName">Pet Supplies / Bird Parrot Cockatiel Swing Toys</h4>
+                     <span class="stars"></span>
+                     <h4 class="price greenprices">
+                          $<span class="priceValue">50.50</span>
+                     </h4>
+               </div>
+               <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><button class="addToCart" data-product-id="13">Add to cart</button></li>
+                   <li class="list-group-item"><button>Details</button></li>
+               </ul>
+                </div>
+        </div>
+        <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="img/Items/Pets/puppyoutfit2.png" alt="...">
+                    </div>
+                    <div class="card-body">
+                     <h4 class="productName">Pet Supplies / Moorfowl Cute Reindeer Pet Dog</h4>
+                     <span class="stars"></span>
+                     <h4 class="price greenprices">
+                          $<span class="priceValue">40.00</span>
+                     </h4>
+               </div>
+               <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><button class="addToCart" data-product-id="14">Add to cart</button></li>
+                   <li class="list-group-item"><button>Details</button></li>
+               </ul>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="img/Items/Automotive/hammer1.png" alt="...">
+                </div>
+                <div class="card-body">
+                 <h4 class="productName">Automotive / BOX Basics Emergency Hammer</h4>
+                 <span class="stars"></span>
+                 <h4 class="price greenprices">
+                      $<span class="priceValue">31.50</span>
+                 </h4>
+           </div>
+           <ul class="list-group list-group-flush">
+               <li class="list-group-item"><button class="addToCart" data-product-id="10">Add to cart</button></li>
+               <li class="list-group-item"><button>Details</button></li>
+           </ul>
+            </div>
+    </div>
+    <div class="carousel-item">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="img/Items/Automotive/jack1.png" alt="...">
+                </div>
+                <div class="card-body">
+                 <h4 class="productName">Automotive / BOX Basics Steel Jack Auto Stands</h4>
+                 <span class="stars"></span>
+                 <h4 class="price greenprices">
+                      $<span class="priceValue">27.60</span>
+                 </h4>
+           </div>
+           <ul class="list-group list-group-flush">
+               <li class="list-group-item"><button class="addToCart" data-product-id="11">Add to cart</button></li>
+               <li class="list-group-item"><button>Details</button></li>
+           </ul>
+            </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="img/Items/Computers/outlet1.png" alt="...">
+            </div>
+            <div class="card-body">
+             <h4 class="productName">C &amp; A / HHSOET Desk Clamp Power Strip</h4>
+             <span class="stars"></span>
+             <h4 class="price greenprices">
+                  $<span class="priceValue">31.00</span>
+             </h4>
+       </div>
+       <ul class="list-group list-group-flush">
+           <li class="list-group-item"><button class="addToCart" data-product-id="2">Add to cart</button></li>
+           <li class="list-group-item"><button>Details</button></li>
+       </ul>
+        </div>
+</div>
+<div class="carousel-item">
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="img/Items/Computers/ports1.png" alt="...">
+            </div>
+            <div class="card-body">
+             <h4 class="productName">C &amp; A / USB C Hub Ethernet,MOKiN 10 in 1</h4>
+             <span class="stars"></span>
+             <h4 class="price greenprices">
+                  $<span class="priceValue">34.50</span>
+             </h4>
+       </div>
+       <ul class="list-group list-group-flush">
+           <li class="list-group-item"><button class="addToCart" data-product-id="3">Add to cart</button></li>
+           <li class="list-group-item"><button>Details</button></li>
+       </ul>
+        </div>
+</div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+     </div>
+
+     <div class="item_row">
+        <div id="carouselExampleControls2" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+             <div class="carousel-item active">
+                  <div class="card">
+                      <div class="img-wrapper">
+                          <img src="img/Items/Computers/gpu1.png" alt="...">
+                      </div>
+                      <div class="card-body">
+                       <h4 class="productName">Gaming / MSI Gaming GeForce RTX 3060 12GB</h4>
+                       <span class="stars"></span>
+                       <h4 class="price greenprices">
+                            $<span class="priceValue">459.00</span>
+                       </h4>
+                 </div>
+                 <ul class="list-group list-group-flush">
+                     <li class="list-group-item"><button class="addToCart" data-product-id="2">Add to cart</button></li>
+                     <li class="list-group-item"><button>Details</button></li>
+                 </ul>
+                  </div>
+          </div>
+          <div class="carousel-item">
+             <div class="card">
+                 <a href="item.html"><div class="img-wrapper">
+                         <img src="img/Items/Computers/mousepad1.png" alt="...">
+                     </div></a>
+                     <div class="card-body">
+                           <h4 class="productName">C & A / Glowworm Giant Desk Mat Extended XL</h4>
+                           <span class="stars"></span>
+                           <h4 class="price greenprices">
+                                $<span class="priceValue">49</span>
+                           </h4>
+                     </div>
+                     <ul class="list-group list-group-flush">
+                         <li class="list-group-item"><button class="addToCart" data-product-id="1">Add to cart</button></li>
+                         <li onclick="window.location.href = 'item.html';" class="list-group-item"><button>Details</button></li>
+                     </ul>
+            </div>
+         </div>
+         <div class="carousel-item">
+             <div class="card">
+                 <div class="img-wrapper">
+                     <img src="img/Items/Computers/monitor1.png" alt="...">
+                 </div>
+                 <div class="card-body">
+                  <h4 class="productName">Gaming / Deco Gear 35” Curved Gaming Monitor</h4>
+                  <span class="stars"></span>
+                  <h4 class="price greenprices">
+                       $<span class="priceValue">349.00</span>
+                  </h4>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><button class="addToCart" data-product-id="22">Add to cart</button></li>
+                <li class="list-group-item"><button>Details</button></li>
+            </ul>
+             </div>
+     </div>
+     <div class="carousel-item">
+        <div class="card">
+            <a href="item.html"><div class="img-wrapper">
+                    <img src="img/Items/Pets/corgibed1.png" alt="...">
+                </div></a>
+                <div class="card-body">
+                      <h4 class="productName">Pet Supplies / JEMA Dog Beds for Medium Dogs</h4>
+                      <span class="stars"></span>
+                      <h4 class="price greenprices">
+                           $<span class="priceValue">29.30</span>
+                      </h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><button class="addToCart" data-product-id="12">Add to cart</button></li>
+                    <li onclick="window.location.href = 'item.html';" class="list-group-item"><button>Details</button></li>
+                </ul>
+       </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="img/Items/Fitness/watch1.png" alt="...">
+            </div>
+            <div class="card-body">
+             <h4 class="productName">Fitness / Amazfit Band 5 Activity Fitness Tracker</h4>
+             <span class="stars"></span>
+             <h4 class="price greenprices">
+                  $<span class="priceValue">40.00</span>
+             </h4>
+       </div>
+       <ul class="list-group list-group-flush">
+           <li class="list-group-item"><button class="addToCart" data-product-id="7">Add to cart</button></li>
+           <li class="list-group-item"><button>Details</button></li>
+       </ul>
+        </div>
+</div>
+<div class="carousel-item">
+   <div class="card">
+       <div class="img-wrapper">
+           <img src="img/Items/Pets/puppyoutfit2.png" alt="...">
+       </div>
+       <div class="card-body">
+        <h4 class="productName">Pet Supplies / Moorfowl Cute Reindeer Pet Dog</h4>
+        <span class="stars"></span>
+        <h4 class="price greenprices">
+             $<span class="priceValue">40.00</span>
+        </h4>
+  </div>
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item"><button class="addToCart" data-product-id="14">Add to cart</button></li>
+      <li class="list-group-item"><button>Details</button></li>
+  </ul>
+   </div>
+</div>
+<div class="carousel-item">
+   <div class="card">
+       <div class="img-wrapper">
+           <img src="img/Items/Gift_Cards/bestbuy.png" alt="...">
+       </div>
+       <div class="card-body">
+        <h4 class="productName">Gift Cards / Best Buy Digital Gift Card</h4>
+        <span class="stars"></span>
+        <h4 class="price greenprices">
+             $<span class="priceValue">25.00</span>
+        </h4>
+  </div>
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item"><button class="addToCart" data-product-id="18">Add to cart</button></li>
+      <li class="list-group-item"><button>Details</button></li>
+  </ul>
+   </div>
+</div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+     </div>
+
+</div>
+
+<!--Top Reads Section-->
+
+<!--section margins-->
+<div class="top-reads-section">
+
+<!--Top Reads txt & Preset Font Style--> 
+<div class="top-reads-heading gothica1-white-white-45px">Category of the Day: Fitness</div>
+
+<!--top row margins-->
+<div class="item_row">
+    <div id="carouselExampleControls3" class="carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="card">
+                <a href="item.html"><div class="img-wrapper">
+                        <img src="img/Items/Fitness/bench1.png" alt="...">
+                    </div></a>
+                    <div class="card-body">
+                          <h4 class="productName">Fitness / FLYBIRD Adjustable Utility Weight Bench</h4>
+                          <span class="stars"></span>
+                          <h4 class="price greenprices">
+                               $<span class="priceValue">100.00</span>
+                          </h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><button class="addToCart" data-product-id="4">Add to cart</button></li>
+                        <li onclick="window.location.href = 'item.html';" class="list-group-item"><button>Details</button></li>
+                    </ul>
+           </div>
+        </div>
+        <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="img/Items/Fitness/pushup1.png" alt="...">
+                    </div>
+                    <div class="card-body">
+                     <h4 class="productName">Fitness / Perfect Fitness Perfect Pushup</h4>
+                     <span class="stars"></span>
+                     <h4 class="price greenprices">
+                          $<span class="priceValue">31.50</span>
+                     </h4>
+               </div>
+               <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><button class="addToCart" data-product-id="5">Add to cart</button></li>
+                   <li class="list-group-item"><button>Details</button></li>
+               </ul>
+                </div>
+        </div>
+        <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="img/Items/Fitness/roller1.png" alt="...">
+                    </div>
+                    <div class="card-body">
+                     <h4 class="productName">Fitness / Vinsguir Ab Roller Wheel Kit</h4>
+                     <span class="stars"></span>
+                     <h4 class="price greenprices">
+                          $<span class="priceValue">120.00</span>
+                     </h4>
+               </div>
+               <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><button class="addToCart" data-product-id="6">Add to cart</button></li>
+                   <li class="list-group-item"><button>Details</button></li>
+               </ul>
+                </div>
+        </div>
+        <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="img/Items/Fitness/watch1.png" alt="...">
+                    </div>
+                    <div class="card-body">
+                     <h4 class="productName">Fitness / Amazfit Band 5 Activity Fitness Tracker</h4>
+                     <span class="stars"></span>
+                     <h4 class="price greenprices">
+                          $<span class="priceValue">40.00</span>
+                     </h4>
+               </div>
+               <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><button class="addToCart" data-product-id="7">Add to cart</button></li>
+                   <li class="list-group-item"><button>Details</button></li>
+               </ul>
+                </div>
+        </div>
+        <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="img/Items/Fitness/yogamat1.png" alt="...">
+                    </div>
+                    <div class="card-body">
+                     <h4 class="productName">Fitness / Yoga Mat Non Slip, Pilates Fitness Mats</h4>
+                     <span class="stars"></span>
+                     <h4 class="price greenprices">
+                          $<span class="priceValue">31.00</span>
+                     </h4>
+               </div>
+               <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><button class="addToCart" data-product-id="8">Add to cart</button></li>
+                   <li class="list-group-item"><button>Details</button></li>
+               </ul>
+                </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="img/Hero/box_icon.png" alt="...">
+                </div>
+                <div class="card-body">
+                 <h4 class="productName">Fitness / Coming Soon</h4>
+                 <span class="stars"></span>
+                 <h4 class="price greenprices">
+                      $<span class="priceValue">0.00</span>
+                 </h4>
+           </div>
+           <ul class="list-group list-group-flush">
+               <li class="list-group-item"><button class="addToCart" disabled>Add to cart</button></li>
+               <li class="list-group-item"><button>Details</button></li>
+           </ul>
+            </div>
+    </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+ </div>
+</div>
+
+</main>
+
+<!--Footer-->
+
+<!--section margins-->
+<footer>
+          <div class="links-container">
+               <div class="links">
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                         <li>
+                              <a href="About_Us.html">About Us</a>
+                         </li>
+                         <li>
+                              <a href="Contact_Us.html">Contact Us</a>
+                         </li>
+                         <li>
+                              <a href="Privacy_Policy.html">Privacy Policy</a>
+                         </li>
+                         <li>
+                              <a href="Terms_And_Conditions.html">Terms &amp; Conditions</a>
+                         </li>
+                    </ul>
+               </div>
+
+               <div class="links">
+                    <h3>Account</h3>
+
+                    <ul>
+                         <li>
+                              <a onclick="signOut()">Sign Out</a>
+                         </li>
+                    </ul>
+               </div>
+
+               <div class="links">
+                    <h3>Contact Us</h3>
+
+                    <ul>
+                         <li>
+                              contact@gmail.com
+                         </li>
+                    </ul>
+
+                    <div class="social">
+                         <a target = "blank" href="https://www.facebook.com/deonaundray.mcfarlane/">
+                              <img src="img/Footer/facebook_icon.svg" alt="">
+                         </a>
+
+                         <a target = "blank" href = 'https://instagram.com/dray_345?igshid=YmMyMTA2M2Y='>
+                              <img src="img/Footer/instagram_icon.svg" alt="">
+                         </a>
+                    </div>
+                    <button onclick="window.location.href = 'forms.html';" class="submit-btn">Make A Suggestion!</button>
+               </div>
+          </div>
+
+          <br><p class="copyright">This website is developed by Dray McFarlane © 2023</p>
+</footer>
+
+</div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="js/herocarousel.js"></script>
+     <script src="js/cart.js"></script>
+     <script src="js/itemcarousel.js"></script>
+     <script src="js/topbutton.js"></script>
+     <script src="js/firebaseaccount.js"></script>
+  </body>
+</html>
