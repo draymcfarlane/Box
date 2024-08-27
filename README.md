@@ -1,2 +1,2 @@
 # Box
-lorem ipsem
+updated description
