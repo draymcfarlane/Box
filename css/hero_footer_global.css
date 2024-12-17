@@ -382,6 +382,10 @@ padding-left: 5%;
 }
 
 @media screen and (max-width:950px) {
+    .header-section {
+        height: 300px;
+    }
+
     header {
         position: static;
     }
@@ -416,11 +420,11 @@ padding-left: 5%;
     }
 
     .prev, .next {
-        top: 100%;
+        top: 50%;
     }
 
     .dotsbox {
-        bottom: -170px;
+        bottom: 20px;
     }
 
     .dot {
@@ -430,8 +434,13 @@ padding-left: 5%;
 }
 
 @media screen and (max-width:450px) {
+    .header-section {
+        height: 250px;
+    }
+
     .slider {
         top: 75px;
+        height: 150px;
     }
 
     .prev, .next {
